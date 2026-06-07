@@ -1,0 +1,18 @@
+{
+    "name": "com.alihan-4108.scene-switcher-bar.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1fdc1bd71c4f5b149bc0963878ef0819"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

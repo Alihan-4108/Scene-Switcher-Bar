@@ -1,0 +1,11 @@
+
+{
+    "name": "com.alihan-4108.scene-switcher-bar",
+    "version": "1.0.0",
+    "displayName": "Scene Switcher Bar",
+    "description": "A lightweight Unity Editor tool that adds scene shortcuts directly to the Main Toolbar, allowing developers to switch between frequently used scenes with a single click.",
+    "unity": "2022.3",
+    "author": {
+        "name": "Alihan Aydin"
+    }
+}
