@@ -2,7 +2,7 @@
 
 A lightweight Unity editor extension that adds **quick scene-switch buttons** to the main editor toolbar. You decide exactly which scenes show up, so the toolbar stays clean no matter how many scenes your project has.
 
-![Scene buttons in the main toolbar](docs/images/toolbar.png)
+![Scene buttons in the main toolbar](docs~/images/toolbar.png)
 
 ## Requirements
 
@@ -22,7 +22,7 @@ https://github.com/Alihan-4108/Scene-Switcher-Bar.git
 
 1. Open **Tools > Scene Toolbar Settings**.
 
-   ![Settings window](docs/images/window.png)
+   ![Settings window](docs~/images/window.png)
 
 2. Tick the scenes you want to see on the toolbar.
    - **Search** filters the list by name.
