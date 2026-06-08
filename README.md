@@ -12,7 +12,7 @@ A lightweight Unity editor extension that adds **quick scene-switch buttons** to
 
 ### Package Manager (Git URL)
 
-If you've added a `package.json` to the repo, open **Window > Package Manager > + > Add package from git URL** and paste:
+Open **Window > Package Manager > + > Add package from git URL** and paste:
 
 ```
 https://github.com/Alihan-4108/Scene-Switcher-Bar.git
