@@ -5,6 +5,7 @@ using System.IO;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEditor.Toolbars;
+using UnityEngine;
 
 #endif
 
@@ -26,10 +27,12 @@ namespace Alihan4108.SceneSwitcherBar
             {
                 var path = AssetDatabase.GUIDToAssetPath(guid);
 
+                var icon = EditorGUIUtility.IconContent("d_SceneAsset Icon").image as Texture2D;
+
                 if (string.IsNullOrEmpty(path)) continue;
 
                 var label = Path.GetFileNameWithoutExtension(path);
-                var content = new MainToolbarContent(label, null, $"Aç: {path}");
+                var content = new MainToolbarContent(label, icon, $"Aç: {path}");
 
                 yield return new MainToolbarButton(content, () => OpenScene(path));
             }
