@@ -1,4 +1,4 @@
-# Scene Toolbar
+# Scene Switcher Bar
 
 A lightweight Unity editor extension that adds **quick scene-switch buttons** to the main editor toolbar. You decide exactly which scenes show up, so the toolbar stays clean no matter how many scenes your project has.
 
