@@ -1,11 +1,8 @@
-
 #if UNITY_EDITOR
 
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
-#endif
 
 namespace Alihan4108.SceneSwitcherBar
 {
@@ -31,8 +28,7 @@ namespace Alihan4108.SceneSwitcherBar
             else
                 Selected.Remove(guid);
 
-            EditorPrefs.SetString(Key, string.Join(";", Selected));
-            SceneSwitcherBar.Refresh();
+            Save();
         }
 
         static void Save()
@@ -56,3 +52,5 @@ namespace Alihan4108.SceneSwitcherBar
         }
     }
 }
+
+#endif
