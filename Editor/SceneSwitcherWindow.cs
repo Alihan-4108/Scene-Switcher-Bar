@@ -4,8 +4,6 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-#endif
-
 namespace Alihan4108.SceneSwitcherBar
 {
     public class SceneSwitcherWindow : EditorWindow
@@ -18,7 +16,9 @@ namespace Alihan4108.SceneSwitcherBar
         [MenuItem("Tools/Scene Toolbar Settings")]
         static void Open()
         {
-            GetWindowWithRect<SceneSwitcherWindow>(new Rect(500, 500, 700, 500), false, "Scene Toolbar");
+            var window = GetWindow<SceneSwitcherWindow>(false, "Scene Toolbar");
+            window.minSize = new Vector2(400, 300);
+            window.Show();
         }
 
         void OnEnable() => Refresh();
@@ -27,10 +27,8 @@ namespace Alihan4108.SceneSwitcherBar
 
         void OnGUI()
         {
-            search = EditorGUILayout.TextField("Search", search, EditorStyles.textArea);
+            search = EditorGUILayout.TextField("Search", search);
             showPath = EditorGUILayout.ToggleLeft("Show Path", showPath, EditorStyles.boldLabel);
-
-            EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
 
             EditorGUILayout.Space();
 
@@ -74,3 +72,5 @@ namespace Alihan4108.SceneSwitcherBar
         }
     }
 }
+
+#endif
