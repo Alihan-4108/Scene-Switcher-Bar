@@ -7,8 +7,6 @@ using UnityEditor.SceneManagement;
 using UnityEditor.Toolbars;
 using UnityEngine;
 
-#endif
-
 namespace Alihan4108.SceneSwitcherBar
 {
     public static class SceneSwitcherBar
@@ -23,16 +21,16 @@ namespace Alihan4108.SceneSwitcherBar
         [MainToolbarElement(Id, defaultDockPosition = MainToolbarDockPosition.Right)]
         public static IEnumerable<MainToolbarElement> SceneButtons()
         {
+            var icon = EditorGUIUtility.IconContent("d_SceneAsset Icon").image as Texture2D;
+
             foreach (var guid in SceneSwitcherSettings.Selected)
             {
                 var path = AssetDatabase.GUIDToAssetPath(guid);
 
-                var icon = EditorGUIUtility.IconContent("d_SceneAsset Icon").image as Texture2D;
-
                 if (string.IsNullOrEmpty(path)) continue;
 
                 var label = Path.GetFileNameWithoutExtension(path);
-                var content = new MainToolbarContent(label, icon, $"Aç: {path}");
+                var content = new MainToolbarContent(label, icon, $"Open: {path}");
 
                 yield return new MainToolbarButton(content, () => OpenScene(path));
             }
@@ -47,3 +45,5 @@ namespace Alihan4108.SceneSwitcherBar
         }
     }
 }
+
+#endif
