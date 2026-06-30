@@ -6,11 +6,30 @@ using UnityEngine;
 
 namespace Alihan4108.SceneSwitcherBar
 {
+    public enum SceneSwitcherDisplayMode
+    {
+        Buttons,
+        Dropdown
+    }
+
     public static class SceneSwitcherSettings
     {
         public static HashSet<string> Selected { get; private set; } = Load();
 
         static string Key => $"SceneToolbar.Selected:{Application.dataPath}";
+        static string ModeKey => $"SceneToolbar.DisplayMode:{Application.dataPath}";
+
+        public static SceneSwitcherDisplayMode DisplayMode
+        {
+            get => (SceneSwitcherDisplayMode)EditorPrefs.GetInt(ModeKey, (int)SceneSwitcherDisplayMode.Buttons);
+            set
+            {
+                if (DisplayMode == value) return;
+
+                EditorPrefs.SetInt(ModeKey, (int)value);
+                SceneSwitcherBar.Refresh();
+            }
+        }
 
         static HashSet<string> Load()
         {
